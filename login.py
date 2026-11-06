@@ -57,6 +57,18 @@ botao = tk.Button(
 
 botao.pack(pady=15)
 
+primeiro_acesso = tk.Label(
+    conteudo,
+    text="PRIMEIRO ACESSO",
+    font=("Arial", 13, "bold"),
+    fg="#2996C5",
+    bg="white",
+    cursor="hand2"
+)
+
+primeiro_acesso.pack(pady=25)
+
+
 
 
            
