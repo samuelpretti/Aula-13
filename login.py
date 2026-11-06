@@ -1,4 +1,14 @@
+from tkinter import messagebox
 import tkinter as tk
+
+def acessar():
+    usuario = email.get()
+    senha_digitada = senha.get()
+
+    if usuario and senha_digitada:
+        messagebox.showinfo("Login", "Acesso realizado!")
+    else:
+        messagebox.showwarning("Atenção", "Preencha todos os campos!")
 
 janela = tk.Tk()
 
@@ -21,27 +31,26 @@ logo.pack(pady=30)
 
 email = tk.Entry(
     conteudo,
-    text="Email",
-    font= ("Arial", 16),
+    font= ("Arial", 14),
     bg="#F0EBEB",
     fg="#8D7777",
-    width=35,
+    width=50,
     relief="flat"
 )
 
-email.pack (pady=12, ipady=18)
+email.pack (pady=12, ipady=10)
 
 senha = tk.Entry(
     conteudo,
-    font= ("Arial", 16),
+    font= ("Arial", 14),
     bg="#F0EBEB",
     fg="#8D7777",
-    width=35,
+    width=50,
     relief="flat",
     show="*"
 )
 
-senha.pack (pady=12, ipady=18)
+senha.pack (pady=12, ipady=10)
 
 botao = tk.Button(
     conteudo,
@@ -51,11 +60,13 @@ botao = tk.Button(
     fg="white",
     width=35,
     height=2,
+    command=acessar,
     relief="flat",
     cursor="hand2"
 )
 
-botao.pack(pady=15)
+botao.pack(pady=15, ipady=12)
+
 
 primeiro_acesso = tk.Label(
     conteudo,
@@ -67,9 +78,6 @@ primeiro_acesso = tk.Label(
 )
 
 primeiro_acesso.pack(pady=25)
-
-
-
 
            
 janela.mainloop()
