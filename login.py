@@ -31,6 +31,32 @@ email = tk.Entry(
 
 email.pack (pady=12, ipady=18)
 
+senha = tk.Entry(
+    conteudo,
+    font= ("Arial", 16),
+    bg="#F0EBEB",
+    fg="#8D7777",
+    width=35,
+    relief="flat",
+    show="*"
+)
+
+senha.pack (pady=12, ipady=18)
+
+botao = tk.Button(
+    conteudo,
+    text="acessar",
+    font= ("Arial", 14, "bold"),
+    bg="#2996C5",
+    fg="white",
+    width=35,
+    height=2,
+    relief="flat",
+    cursor="hand2"
+)
+
+botao.pack(pady=15)
+
 
 
            
